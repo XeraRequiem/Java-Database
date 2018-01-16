@@ -76,9 +76,9 @@ public class Parser {
 		String[] args = arg.split(" ", 2);
 		LinkedList<Tuple> tuplesToRemove = null;
 		try {
-			if (args[0].equals("WHERE"))
+			if (args[0].equals("WHERE")) {
 				tuplesToRemove = getTuplesWhere(relation.getSchema(), relation.getTuples(), args[1]);
-			else
+			} else
 				Error.printSyntaxError(args[0] + " " + args[1]);
 		} catch (Exception e) {
 			tuplesToRemove = null;
@@ -88,11 +88,11 @@ public class Parser {
 	
 	//Remove the tuples from list that don't satisfy conditions
 	public static LinkedList<Tuple> getTuplesWhere(Schema schema, LinkedList<Tuple> tuples, String conds) {
-		String[] unions = conds.split(" or ");
+		String[] unions = conds.split(" OR ");
 		
 		LinkedList<LinkedList<Tuple>> unionList = new LinkedList<LinkedList<Tuple>>();
 		for (String union : unions) {
-			LinkedList<Tuple> result = getIntersectOfTuples(tuples, schema, union.split(" and "));
+			LinkedList<Tuple> result = getIntersectOfTuples(tuples, schema, union.split(" AND "));
 			if (result == null) {
 				return null;
 			}
@@ -137,7 +137,7 @@ public class Parser {
 			int index = schema.getIndexOf(att);
 			String type = schema.getHeaders().get(index).getType();
 			
-			if (type.equals("CHAR") && !val.matches("^[A-Za-z][A-Za-z0-9 ]*") || type.equals("NUM") && !val.matches("[0-9]*")) {
+			if (type.equals("CHAR") && val.matches("^[0-9]*") || type.equals("NUM") && !val.matches("[0-9]*")) {
 				Error.printMismatchError(val, type);
 				return null;
 			}
@@ -214,19 +214,17 @@ public class Parser {
 		}
 		
 		String[] args = arg.split(" ", 2);
-		Relation result;
 		if (args.length == 1) {
 			return new Relation(name, rel.getSchema(), rel.getTuples());
 		}
 		else if (!args[0].equals("WHERE") || args.length != 2) {
 			Error.printSyntaxError(arg);
-			return null;
 		} else {	
 			LinkedList<Tuple> tups = Parser.getTuplesWhere(rel.getSchema(), rel.getTuples(), args[1]);
-			result = new Relation(name, rel.getSchema(), tups);
+			if (tups != null)
+				return new Relation(name, rel.getSchema(), tups);
 		}
-		
-		return result;
+		return null;
 	}
 	
 	public static LinkedList<String []> project(String arg) {
