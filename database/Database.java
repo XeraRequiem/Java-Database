@@ -94,11 +94,6 @@ public class Database {
 				return r;
 		}
 		
-		for (Relation r : tempRelations) {
-			if (r.getName().equals(name))
-				return r;
-		}
-		
 		Error.printExistenceError(name, false);
 		return null;
 	}	
