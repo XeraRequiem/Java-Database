@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Database>
+    <Relation name="COURSE">
+        <Schema>
+            <Header max="8" name="CNUM" type="CHAR"/>
+            <Header max="30" name="TITLE" type="CHAR"/>
+            <Header max="4" name="CREDITS" type="NUM"/>
+        </Schema>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI141"/>
+            <Attribute type="CHAR" value="COMPUTER PROGRAMMING I"/>
+            <Attribute type="NUM" value="4"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI145"/>
+            <Attribute type="CHAR" value="COMP PROG &amp; LINER DATA STRUCT"/>
+            <Attribute type="NUM" value="4"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI241"/>
+            <Attribute type="CHAR" value="DATA STRUCTURES"/>
+            <Attribute type="NUM" value="4"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI301"/>
+            <Attribute type="CHAR" value="FORMAL LANGUAGES"/>
+            <Attribute type="NUM" value="5"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI305"/>
+            <Attribute type="CHAR" value="ALGORITHMS"/>
+            <Attribute type="NUM" value="4"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI330"/>
+            <Attribute type="CHAR" value="DATABASE SYSTEMS"/>
+            <Attribute type="NUM" value="4"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI345"/>
+            <Attribute type="CHAR" value="OBJECT ORIENTED DESIGN"/>
+            <Attribute type="NUM" value="4"/>
+        </Tuple>
+    </Relation>
+    <Relation name="PREREQ">
+        <Schema>
+            <Header max="8" name="CNUM" type="CHAR"/>
+            <Header max="8" name="PNUM" type="CHAR"/>
+        </Schema>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI141"/>
+            <Attribute type="CHAR" value="MATH112"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI145"/>
+            <Attribute type="CHAR" value="MATH115"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI145"/>
+            <Attribute type="CHAR" value="CSCI141"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI241"/>
+            <Attribute type="CHAR" value="MATH124"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI241"/>
+            <Attribute type="CHAR" value="CSCI145"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI301"/>
+            <Attribute type="CHAR" value="CSCI145"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI305"/>
+            <Attribute type="CHAR" value="CSCI301"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI305"/>
+            <Attribute type="CHAR" value="CSCI241"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI330"/>
+            <Attribute type="CHAR" value="CSCI241"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI345"/>
+            <Attribute type="CHAR" value="CSCI241"/>
+        </Tuple>
+    </Relation>
+    <Relation name="OFFERING">
+        <Schema>
+            <Header max="8" name="CNUM" type="CHAR"/>
+            <Header max="5" name="SECTION" type="NUM"/>
+            <Header max="5" name="STARTHOUR" type="CHAR"/>
+            <Header max="5" name="ENDHOUR" type="CHAR"/>
+            <Header max="5" name="DAYS" type="CHAR"/>
+            <Header max="10" name="ROOM" type="CHAR"/>
+            <Header max="20" name="INSTRUCTOR" type="CHAR"/>
+        </Schema>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI141"/>
+            <Attribute type="NUM" value="27921"/>
+            <Attribute type="CHAR" value="13:00"/>
+            <Attribute type="CHAR" value="13:50"/>
+            <Attribute type="CHAR" value="MWF"/>
+            <Attribute type="CHAR" value="CF115"/>
+            <Attribute type="CHAR" value="JAGODZINSKI"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI241"/>
+            <Attribute type="NUM" value="27922"/>
+            <Attribute type="CHAR" value="9:00"/>
+            <Attribute type="CHAR" value="9:50"/>
+            <Attribute type="CHAR" value="MWF"/>
+            <Attribute type="CHAR" value="AW205"/>
+            <Attribute type="CHAR" value="ISLAM"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI241"/>
+            <Attribute type="NUM" value="27935"/>
+            <Attribute type="CHAR" value="11:00"/>
+            <Attribute type="CHAR" value="11:50"/>
+            <Attribute type="CHAR" value="MWF"/>
+            <Attribute type="CHAR" value="AW403"/>
+            <Attribute type="CHAR" value="BOVER"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI305"/>
+            <Attribute type="NUM" value="27950"/>
+            <Attribute type="CHAR" value="14:00"/>
+            <Attribute type="CHAR" value="14:50"/>
+            <Attribute type="CHAR" value="MTWF"/>
+            <Attribute type="CHAR" value="AW403"/>
+            <Attribute type="CHAR" value="LIU"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI330"/>
+            <Attribute type="NUM" value="27974"/>
+            <Attribute type="CHAR" value="12:00"/>
+            <Attribute type="CHAR" value="12:50"/>
+            <Attribute type="CHAR" value="MTWF"/>
+            <Attribute type="CHAR" value="CF314"/>
+            <Attribute type="CHAR" value="DENEKE"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="CSCI330"/>
+            <Attribute type="NUM" value="27977"/>
+            <Attribute type="CHAR" value="14:00"/>
+            <Attribute type="CHAR" value="14:50"/>
+            <Attribute type="CHAR" value="MTWF"/>
+            <Attribute type="CHAR" value="CF316"/>
+            <Attribute type="CHAR" value="DENEKE"/>
+        </Tuple>
+    </Relation>
+    <Relation name="STAFF">
+        <Schema>
+            <Header max="20" name="NAME" type="CHAR"/>
+            <Header max="10" name="SPOUSE" type="CHAR"/>
+            <Header max="5" name="RANK" type="CHAR"/>
+            <Header max="10" name="CAMPUSADDR" type="CHAR"/>
+            <Header max="9" name="EXTENSION" type="CHAR"/>
+        </Schema>
+        <Tuple>
+            <Attribute type="CHAR" value="GREGORY"/>
+            <Attribute type="CHAR" value="DON"/>
+            <Attribute type="CHAR" value="SEC"/>
+            <Attribute type="CHAR" value="A8C"/>
+            <Attribute type="CHAR" value="0030"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="DENEKE"/>
+            <Attribute type="CHAR" value="WHO"/>
+            <Attribute type="CHAR" value="ASSIS"/>
+            <Attribute type="CHAR" value="CF 479"/>
+            <Attribute type="CHAR" value="3769"/>
+        </Tuple>
+    </Relation>
+    <Relation name="INTERESTS">
+        <Schema>
+            <Header max="20" name="NAME" type="CHAR"/>
+            <Header max="30" name="INTEREST" type="CHAR"/>
+        </Schema>
+        <Tuple>
+            <Attribute type="CHAR" value="DENEKE"/>
+            <Attribute type="CHAR" value="AI"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="DENEKE"/>
+            <Attribute type="CHAR" value="DBMS"/>
+        </Tuple>
+    </Relation>
+    <Relation name="DEPT">
+        <Schema>
+            <Header max="20" name="NAME" type="CHAR"/>
+            <Header max="4" name="DEPT" type="CHAR"/>
+        </Schema>
+        <Tuple>
+            <Attribute type="CHAR" value="DENEKE"/>
+            <Attribute type="CHAR" value="CSCI"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="ISLAM"/>
+            <Attribute type="CHAR" value="CSCI"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="CHAR" value="GREGORY"/>
+            <Attribute type="CHAR" value="MATH"/>
+        </Tuple>
+    </Relation>
+    <Relation name="Test Relation">
+        <Schema>
+            <Header max="5" name="test1" type="int"/>
+            <Header max="1" name="test2" type="char"/>
+            <Header max="4" name="test3" type="uint"/>
+        </Schema>
+        <Tuple>
+            <Attribute type="int" value="5"/>
+            <Attribute type="char" value="a"/>
+            <Attribute type="uint" value="7"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="int" value="-1"/>
+            <Attribute type="char" value="z"/>
+            <Attribute type="uint" value="1"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="int" value="0"/>
+            <Attribute type="char" value="s"/>
+            <Attribute type="uint" value="4"/>
+        </Tuple>
+    </Relation>
+    <Relation name="Test Relation2">
+        <Schema>
+            <Header max="5" name="test1" type="int"/>
+            <Header max="1" name="test2" type="char"/>
+            <Header max="4" name="test3" type="uint"/>
+        </Schema>
+        <Tuple>
+            <Attribute type="int" value="5"/>
+            <Attribute type="char" value="a"/>
+            <Attribute type="uint" value="7"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="int" value="-1"/>
+            <Attribute type="char" value="z"/>
+            <Attribute type="uint" value="1"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="int" value="0"/>
+            <Attribute type="char" value="s"/>
+            <Attribute type="uint" value="4"/>
+        </Tuple>
+    </Relation>
+    <Relation name="Test Relation3">
+        <Schema>
+            <Header max="5" name="test1" type="int"/>
+            <Header max="1" name="test2" type="char"/>
+            <Header max="4" name="test3" type="uint"/>
+        </Schema>
+        <Tuple>
+            <Attribute type="int" value="5"/>
+            <Attribute type="char" value="a"/>
+            <Attribute type="uint" value="7"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="int" value="-1"/>
+            <Attribute type="char" value="z"/>
+            <Attribute type="uint" value="1"/>
+        </Tuple>
+        <Tuple>
+            <Attribute type="int" value="0"/>
+            <Attribute type="char" value="s"/>
+            <Attribute type="uint" value="4"/>
+        </Tuple>
+    </Relation>
+</Database>

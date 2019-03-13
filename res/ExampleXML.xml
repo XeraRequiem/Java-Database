@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Database>
+	<Relation name = "Test Relation">
+		<Schema>
+			<Header name = "test1" type = "int"  max = "5" />
+			<Header name = "test2" type = "char" max = "1" />
+			<Header name = "test3" type = "uint" max = "4" />
+		</Schema>
+		<Tuple>
+			<Attribute type = "int"  value = "5" />
+			<Attribute type = "char" value = "a" />
+			<Attribute type = "uint" value = "7" />
+		</Tuple>
+		<Tuple>
+			<Attribute type = "int"  value = "-1" />
+			<Attribute type = "char" value = "z"  />
+			<Attribute type = "uint" value = "1"  />
+		</Tuple>
+		<Tuple>
+			<Attribute type = "int"  value = "0" />
+			<Attribute type = "char" value = "s" />
+			<Attribute type = "uint" value = "4" />
+		</Tuple>
+	</Relation>
+		<Relation name = "Test Relation2">
+		<Schema>
+			<Header name = "test1" type = "int"  max = "5" />
+			<Header name = "test2" type = "char" max = "1" />
+			<Header name = "test3" type = "uint" max = "4" />
+		</Schema>
+		<Tuple>
+			<Attribute type = "int"  value = "5" />
+			<Attribute type = "char" value = "a" />
+			<Attribute type = "uint" value = "7" />
+		</Tuple>
+		<Tuple>
+			<Attribute type = "int"  value = "-1" />
+			<Attribute type = "char" value = "z"  />
+			<Attribute type = "uint" value = "1"  />
+		</Tuple>
+		<Tuple>
+			<Attribute type = "int"  value = "0" />
+			<Attribute type = "char" value = "s" />
+			<Attribute type = "uint" value = "4" />
+		</Tuple>
+	</Relation>
+		<Relation name = "Test Relation3">
+		<Schema>
+			<Header name = "test1" type = "int"  max = "5" />
+			<Header name = "test2" type = "char" max = "1" />
+			<Header name = "test3" type = "uint" max = "4" />
+		</Schema>
+		<Tuple>
+			<Attribute type = "int"  value = "5" />
+			<Attribute type = "char" value = "a" />
+			<Attribute type = "uint" value = "7" />
+		</Tuple>
+		<Tuple>
+			<Attribute type = "int"  value = "-1" />
+			<Attribute type = "char" value = "z"  />
+			<Attribute type = "uint" value = "1"  />
+		</Tuple>
+		<Tuple>
+			<Attribute type = "int"  value = "0" />
+			<Attribute type = "char" value = "s" />
+			<Attribute type = "uint" value = "4" />
+		</Tuple>
+	</Relation>
+</Database>
