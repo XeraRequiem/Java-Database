@@ -1,4 +1,4 @@
- # Surly-Database
+ # Java Database
 
 Example implementation of SURLY database.
 
